@@ -6,20 +6,18 @@
     font-family: "Montserrat", serif;
 }
 .texto{
-    font-family: ;
+    font-family: "Roboto", serif;
 }
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body{
 
-}
 header{
     display: grid;
     grid-template-columns: auto 1fr auto;
-    border-top: 5px #523e7a solid;
+    border-top: 5px #9B7EBD solid;
     padding: 20px;
     background-color: rgb(0, 0, 43);
     background-image: url(imgs/logo_banner.png);
@@ -37,4 +35,48 @@ header .logo-container{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+#mobile-nav{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    right: 100%;
+    background-color: #9B7EBD;
+    transition: .5s ease-in-out;
+}
+#mobile-nav.mostrar{
+    right: 0;
+}
+#mobile-nav #mobile-top{
+    display: flex;
+    box-sizing: content-box;
+    padding: 20px;
+    height: 30px;
+}
+#redes-sociais-container{
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+}
+#redes-sociais-container li, #redes-sociais-container svg{
+    height: 100%;
+    width: max-content;
+    margin-left: 10px;
+    fill: white;
+}
+#fechar-mobile-nav{
+    position: relative;
+    height: 100%;
+    width: 30px;
+}
+#fechar-mobile-nav::before{
+    content: 'X';
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
 }
