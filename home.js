@@ -1,3 +1,3 @@
-$("#abrir-navegação, #fechar-mobile-nav").click(function(){
+$("#abrir-navegação, #fechar-mobile-nav, .home-btn").click(function(){
     $("#mobile-nav").toggleClass("mostrar")
 })
