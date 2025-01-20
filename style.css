@@ -27,6 +27,7 @@ header{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    margin-bottom: 20px;
 }
 
 .header-icon{
@@ -46,6 +47,7 @@ header .logo-container{
     right: 100%;
     background-color: #9B7EBD;
     transition: .5s ease-in-out;
+    z-index: 99999;
 }
 #mobile-nav.mostrar{
     right: 0;
@@ -76,6 +78,9 @@ header .logo-container{
     height: 100%;
     width: 30px;
 }
+#abrir-navegacao{
+    cursor: pointer;
+}
 #fechar-mobile-nav::before{
     content: 'X';
     position: absolute;
@@ -101,4 +106,52 @@ header .logo-container{
 #mobile-nav > ul > li > *{
     font-size: 24px;
     color: white;
+}
+h3{
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+h3>span{
+    padding-right: 20px;
+}
+h3::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #9B7EBD;
+}
+.noticia-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    grid-auto-rows: 200px;
+    padding: 0 20px;
+    row-gap: 20px;
+}
+.noticia{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.noticia img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+.noticia p{
+    position: absolute;
+    width: 85%;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    font-size: 20px;
 }
